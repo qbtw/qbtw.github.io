@@ -68,11 +68,13 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="title,first-blood," />
+  <meta name="keywords" content="代码,js," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="qbtw" type="application/atom+xml" />
 
 
 
@@ -84,18 +86,18 @@
 
 
 
-<meta name="description" content="网站简介第二天">
-<meta name="keywords" content="title,first-blood">
+<meta name="description" content="js由 语法ECMA 特性DOM.BOM 组成针对api 应用程序接口的document.getElementById(“box”);">
+<meta name="keywords" content="代码,js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My Gallery">
+<meta property="og:title" content="js dom">
 <meta property="og:url" content="http://yoursite.com/2017/12/26/My-Gallery/index.html">
 <meta property="og:site_name" content="qbtw">
-<meta property="og:description" content="网站简介第二天">
+<meta property="og:description" content="js由 语法ECMA 特性DOM.BOM 组成针对api 应用程序接口的document.getElementById(“box”);">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-26T13:52:08.615Z">
+<meta property="og:updated_time" content="2017-12-28T07:05:26.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Gallery">
-<meta name="twitter:description" content="网站简介第二天">
+<meta name="twitter:title" content="js dom">
+<meta name="twitter:description" content="js由 语法ECMA 特性DOM.BOM 组成针对api 应用程序接口的document.getElementById(“box”);">
 
 
 
@@ -119,7 +121,7 @@
   <link rel="canonical" href="http://yoursite.com/2017/12/26/My-Gallery/"/>
 
 
-  <title> My Gallery | qbtw </title>
+  <title> js dom | qbtw </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -142,7 +144,7 @@
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
-
+	<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
@@ -225,7 +227,7 @@
             
             
               
-                My Gallery
+                js dom
               
             
           </h1>
@@ -284,8 +286,26 @@
       
 
       
-        <h2 id="网站简介"><a href="#网站简介" class="headerlink" title="网站简介"></a>网站简介</h2><p>第二天<br><a id="more"></a></p>
-<h2 id="网站日志"><a href="#网站日志" class="headerlink" title="网站日志"></a>网站日志</h2><p>打算通宵 在努力学习改东西 同事介绍一个保险工作很不错的样子 好想去 不舍得前端T T<br><!--more--></p>
+        <p>js由 语法ECMA 特性DOM.BOM 组成<br>针对api 应用程序接口的<br>document.getElementById(“box”);<br><a id="more"></a></p>
+<h2 id="网站日志"><a href="#网站日志" class="headerlink" title="网站日志"></a>网站日志</h2><p>js由 语法ECMA 特性DOM.BOM 组成<br>针对api 应用程序接口的</p>
+<p> // 获取id为box的这个元素<br>    通过id查找<br>       var box=document.getElementById(“box”);<br>       console.log(box);<br>       // 获取页面中所有的li 标签<br>       var lis=document.getElementsByTagName(“li”);<br>       console.log(lis.length);<br>       // 获取id为list1下的所有的li<br>       var lis2=document.getElementById(“list1”).getElementsByTagName(“li”);<br>标签+id</p>
+<p>设置样式<br>  // 设置id为box的这个元素的文字颜色,属性是减号连接的复合形式时<br>       // 必需要转换为驼峰形式<br>       var box=document.getElementById(“box”);<br>       box.style.color=’#f00’;<br>       box.style.fontWeight=”bold”;<br>       var lis=document.getElementById(“list”).getElementsByTagName(“li”);<br>       // 遍历每一个li<br>       for(var i=0,len=lis.length;i<len;i++){ lis[i].style.color="#00f" ;="" if(i="=0){" lis[i].style.backgroundcolor="#ccc" }else="" }else{="" }="" <="" script=""><br>如果是font-size 那就要改成驼峰形式fontSize<br>Tagname返回的都是数组<br>id是一个值 因为id是唯一的</len;i++){></p>
+<p>innerHTML 获取和设置标签之间的文本和html内容 会打印出标签内的 标签和文本的内容</p>
+<p><div class="box" id="box"><br>        元素1<br>    </div><br>    <ul id="list"><br>        <li><i>前端开发</i></li><br>        <li class="on"><b>服务器端开发</b></li><br>        <li>UI设计</li><br>    </ul><br>    <script><br>       var lis=document.getElementById(“list”).getElementsByTagName(“li”);<br>       for(var i=0,len=lis.length;i<len;i++){
+           console.log(lis[i].innerHTML);
+           lis[i].innerHTML+='程序';
+           lis[1].className="current";
+       }
+       console.log(document.getElementById("box").className);
+    </script><br>lis[i].innerHTML+=’程序’; 文本内容里面加程序两个字<br>lis[1].className=”current”;给第二个li加class加一个current属性<br>console.log(document.getElementById(“box”).className); 获取class属性<br>class只能替换不能新增</p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br>    <style><br>      .on{border-bottom:1px solid #0f0;}<br>      .current{background:#ccc;color:#f00;}<br>    </style><br></head></p>
+<body><br>    <p id="text" class="text" align="center" data-type="title">文本</p><br>    <input type="text" name="user" value="user" id="user" validate="true"><br>    <script><br>        var p=document.getElementById(“text”);<br>        var user=document.getElementById(“user”);  // null<br>        console.log(p.getAttribute(“class”));  //p.className<br>        console.log(user.getAttribute(“validate”));<br>        // 给p设置一个data-color的属性<br>        p.setAttribute(“data-color”,”red”);<br>        // 给input设置一个isRead的属性<br>        user.setAttribute(“isRead”,”false”);<br>        // 删除p上的align属性<br>        p.removeAttribute(“align”);<br>    </script><br></body>
+
+<p>var user=document.getElementById(“user”); 要获取属性 要先获取id<br>user.getAttribute(“validate”) 要获取这个validate属性<br>然后就是设置和删除这几个属性<br>user.setAttribute(“isRead”,”false”);<br>p.removeAttribute(“align”);<br>如果说type name id value 可以直接用user.id 这种写出来 因为这都是它自带的<br>有些属性是自己定义的 所以需要getAttribute</p>
+<p>dom事件<br>js和html交互就是事件</p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br>    <style><br>       .btn{width:140px;height:30px;line-height: 30px;background:#00f;<br>           color:#fff;font-size:14px;text-align:center;border-radius:5px;<br>           cursor:pointer;margin-top:30px;}<br>    </style><br></head></p>
+<p><body><br>    <input type="button" value="弹 出" onclick="alert('我是按钮')"><br>    <!--鼠标划过按钮时调用mouseoverFn的函数--><br>    <div class="btn" onmouseover="mouseoverFn(this,'#f00')" onmouseout="mouseoutFn(this,'#ff0')">开始</div><br>    <div class="btn" onmouseover="mouseoverFn(this,'#0f0')" onmouseout="mouseoutFn(this,'#333')">结束</div><br>    <script><br>        function mouseoverFn(btn,bgColor){<br>            // 鼠标划过按钮时，按钮的背景变为红色<br>            btn.style.background=bgColor;<br>        }<br>        function mouseoutFn(btn,bgColor){<br>            btn.style.background=bgColor;<br>        }<br>    </script><br></body><br>事件触发函数中 this是对该dom对象的引用</p>
+<p>bom对象核心是windows</p>
 
       
     </div>
@@ -308,9 +328,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/title/" rel="tag">#title</a>
+            <a href="/tags/代码/" rel="tag">#代码</a>
           
-            <a href="/tags/first-blood/" rel="tag">#first-blood</a>
+            <a href="/tags/js/" rel="tag">#js</a>
           
         </div>
       
@@ -319,8 +339,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/25/在努力尝试的我-很累/" rel="next" title="我的 自己的 博客 开始了">
-                <i class="fa fa-chevron-left"></i> 我的 自己的 博客 开始了
+              <a href="/2017/12/25/在努力尝试的我-很累/" rel="next" title="前端面试题">
+                <i class="fa fa-chevron-left"></i> 前端面试题
               </a>
             
           </div>
@@ -385,7 +405,7 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/uploads/avatar.png"
                alt="qbtw" />
           <p class="site-author-name" itemprop="name">qbtw</p>
           <p class="site-description motion-element" itemprop="description">cool</p>
@@ -401,7 +421,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -410,7 +430,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -418,6 +438,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -439,7 +466,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站简介"><span class="nav-number">1.</span> <span class="nav-text">网站简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站日志"><span class="nav-number">2.</span> <span class="nav-text">网站日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站日志"><span class="nav-number">1.</span> <span class="nav-text">网站日志</span></a></li></ol></div>
             
           </div>
         </section>
@@ -571,6 +598,9 @@
 
   
 
+  
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 </body>
 </html>
